@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from sportsocial.webfactional.com/Dashboard/business-details-info by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Jul 2018 11:34:05 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>GETPOINTS BUSINESS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+  	<!--   CSS  -->
+  	<link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  	<link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="css/branding2.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+
+
+	
+  	<!--   JS   -->
+  	<script src="../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script defer src="../../use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  	<script src="js/design.js"></script>	
+        <script type="text/javascript" src="jquery.timepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery.timepicker.css" />
+	<script type="text/javascript" src="lib/bootstrap-datepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker.css" />
+        <script src="../js/jquery.form.js"></script>
+        <script src="../users/jquery.blockUI.js"></script>
+        <script>
+   
+ var dimes = "";
+   $(function() {
+	   
+	  
+	   
+     $("#logohit").change(function (){
+		   
+   $.blockUI({ css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff'},
+            message: '<h1>Please Wait...</h1><p> </p>' 
+            
+        });
+  var file_data = this.files[0]  
+  var form_data = new FormData();                  
+  form_data.append('file', file_data)
+
+  
+    $.ajax({
+                url: 'upload.php?t=1', // point to server-side PHP script 
+                dataType: 'text',  // what to expect back from the PHP script, if anything
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,                         
+                type: 'post',
+                success: function(php_script_response){
+                    //alert(php_script_response); // display response from the PHP script, if any
+	var df=document.getElementById("preview").innerHTML;
+	var res = df.replace("Image must be Min 150 X 150 ", "");
+	document.getElementById("preview").innerHTML=res; 
+	document.getElementById("preview").innerHTML=php_script_response;
+	$.unblockUI();
+	
+                }
+     });  
+     });
+	
+  });
+  
+    </script>
+    
+    
+    <script>
+   
+ var dimes = "";
+   $(function() {
+	   
+	  
+	   
+     $("#rimg").change(function (){
+		   
+   $.blockUI({ css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff'},
+            message: '<h1>Please Wait...</h1><p> </p>' 
+            
+        });
+        
+  var file_data = this.files[0]  
+  var form_data = new FormData();                  
+  form_data.append('file', file_data)
+
+  
+    $.ajax({
+                url: 'upload2.php?t=1', // point to server-side PHP script 
+                dataType: 'text',  // what to expect back from the PHP script, if anything
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,                         
+                type: 'post',
+                success: function(php_script_response){
+                    //alert(php_script_response); // display response from the PHP script, if any
+	var df=document.getElementById("preview2").innerHTML;
+	var res = df.replace("Image must be Min 320 X 200", "");
+	document.getElementById("preview2").innerHTML=res; 
+	document.getElementById("preview2").innerHTML=php_script_response;
+	$.unblockUI();
+	
+                }
+     });  
+     });
+	
+  });
+  
+    </script>
+    
+    <script>
+   
+ var dimes = "";
+   $(function() {
+	   
+	  
+	   
+     $("#pimg").change(function (){
+		   
+   $.blockUI({ css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff'},
+            message: '<h1>Please Wait...</h1><p> </p>' 
+            
+        });
+        
+  var file_data = this.files[0]  
+  var form_data = new FormData();                  
+  form_data.append('file', file_data)
+
+  
+    $.ajax({
+                url: 'upload3.php?t=1', // point to server-side PHP script 
+                dataType: 'text',  // what to expect back from the PHP script, if anything
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,                         
+                type: 'post',
+                success: function(php_script_response){
+                    //alert(php_script_response); // display response from the PHP script, if any
+	var df=document.getElementById("preview3").innerHTML;
+	var res = df.replace("Image must be Min 320 X 200", "");
+	document.getElementById("preview3").innerHTML=res; 
+	document.getElementById("preview3").innerHTML=php_script_response;
+	$.unblockUI();
+	
+                }
+     });  
+     });
+	
+  });
+  
+    </script>
+</head>
+
+
+<body>
+
+ 
+
+
+     <!-- ====================================================  START HEADER ========================================================== -->
+      <div class="container container-a">
+          <header id="masthead">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">    
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="../index.html"> <img src="images/logo.png" id="logo" alt="Loading..." height="auto" width="195"> </a><br/>
+                    
+                    <div class="prog-bar">
+                        <div class="col-sm-3 msg">Complete your profile</div>
+                        <div class="col-sm-8">         
+                            <div class="progress progress-100">
+                                <div class="progress-bar progress-bar-100 " role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="20" >  100%  </div>
+                            </div>
+                        </div> 
+                        <div class="col-sm-1 msg2">   100%  </div>
+                    </div>
+                </div>    
+                
+                  <div class="navbar-collapse collapse" >
+                    <ul class="nav navbar-nav" style="margin-left: 10%">
+                        
+                      <li><a href="business-signup-login-info"><button type="button" class="btn btn-default btn-arrow-right"> Business Login and Password </button></a></li>
+                      <li><a href="business-account-info-2.html"><button  type="button" class="btn btn-default btn-arrow-right "> Business Account Info</button></a></li>
+                      <li><a href=" javascript:void(0) "><button  type="button" class="btn btn-default btn-arrow-right  active"> Business Details Info </button></a></li>
+                      <li style="display: none"><a href="sign-up-reward-details.html"><button type="button" class="btn btn-default btn-arrow-right"> Reward Details </button></a></li>
+                      <li style="display: none"><a href="loyalty-plan.html"><button type="button" class="btn btn-default btn-arrow-right"> Loyalty Plan </button></a></li>
+                    </ul>
+                  </div>    
+                  <br/>
+            </div>
+        </header>
+    </div>
+
+<!-- ====================================================  END HEADER ========================================================== -->
+
+<div class="padding-sn"></div>
+
+<!-- START OF CONTAINER ONE-->
+  <div class="container container-b">
+       <div class="padding-sn"></div>
+       <p>In this Business Details information section this is where our users get to know more about you and what you do. Fill out the below optional information</p>
+       <div class="padding-sn"></div>
+  </div>
+<!-- END OF CONTAINER ONE-->
+<div class="padding-sn"></div>
+
+<div id="ajax-loading" style="display:none"></div>
+
+<!-- START OF CONTAINER TWO-->
+<form class="form-horizontal" method="post" action="javascript:void(0)" id="forem">
+<div class="container">
+    <div class="padding-sn"></div>
+   
+         
+         <div class="form-group">
+              <label class="control-label col-sm-2" for="">About Your Business:</label>
+              <div class="col-sm-6">
+                  <textarea type="text" class="form-control" id="about" name="about" placeholder=" " style="height: 200px;"></textarea>
+              </div>
+         </div>
+   
+</div>
+<!-- END OF CONTAINER TWO-->
+<div class="padding-sn"></div>
+
+<script>
+			$(function() {
+				$('.time').timepicker({ 'scrollDefault': 'now' });
+			});
+			</script>
+
+<!-- START OF CONTAINER THREE-->
+
+<div class="container">
+
+      <div class="col-sm-12" style="text-align: center;">
+        <h3>HOURS OF OPERATION</h3>
+      </div>
+      
+      <div class="col-sm-2 timeOperation">
+          <div class="padding-sm"></div><strong>DAY</strong><br>Opening Hour <br> Closing Hour
+          <div class="padding-sn"></div>
+      </div>
+      
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Monday
+          <input type="text" name="mon[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text" name="mon[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Tuesday
+          <input type="text" name="tue[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text" name="tue[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Wednesday
+          <input type="text" name="wed[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text" name="wed[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Thursday
+          <input type="text"  name="thu[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text"  name="thu[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Friday
+          <input type="text" name="fri[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text" name="fri[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Saturday
+          <input type="text" name="sat[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text" name="sat[]" value="" class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-1 col-Days" style="text-align: center;">
+          <div class="padding-sn"></div>
+          Sunday
+          <input type="text" name="sun[]" value=""  class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+          <input type="text" name="sun[]" value=""  class="form-control time" id="" placeholder="XX" style="text-align: center;"><div class="padding-sn"></div>
+      </div>
+
+      <div class="col-sm-2 col-btnGroup-a">
+          <div class="padding-sm"></div>
+              <div class="col-sm-12"><button style="display: none" class="btn btnEdit-d">EDIT</button></div> 
+          <div class="padding-sn"></div>
+          <div class="col-sm-12"><button style="display: none" class="btn btnSave-d" type="button" id="next2">SAVE</button></div>
+          <div class="padding-sn"></div>
+      </div>   
+
+   </div>
+
+   <!-- END OF CONTAINER-->
+
+
+
+    <div class="padding-sm"></div>
+
+  <!-- START OF CONTAINER -->
+
+   <div class="container">
+
+         <div class="padding-sn"></div>
+
+         <div class="col-sm-4 col-Upload">
+           <div class="col-sm-6 bizLogoTxt"><h5 style="font-weight: 600">Business Photo Images</h5> <br>Biz Logo</div>
+           <div class="col-sm-6"><button class="btn btnUpload-a" id="add-card-btn">Upload <i class="fas fa-caret-down"></i></button>
+           <input type="file" id="logohit" name="logo" style="visibility: hidden;">
+           <script>document.getElementById('add-card-btn').onclick = function() {
+    document.getElementById('logohit').click();
+};</script>
+           </div> 
+           <div class="col-sm-6"></div>
+           <div class="col-sm-6" id="preview"><img src="images/image-upload.png" class="image-wrapper-sm" width="100%"> </div>
+         </div>
+
+         <div class="col-sm-4 col-Upload">
+           <div class="col-sm-6 bizLogoTxt"><h5 style="font-weight: 600">Business Background Image</h5><br> Reward Card Image</div>
+           <div class="col-sm-6"><button class="btn btnUpload-a" id="add-card-btn2">Upload <i class="fas fa-caret-down"></i></button>
+           <input type="file" id="rimg" name="rimg" style="visibility: hidden;">
+    <script>document.getElementById('add-card-btn2').onclick = function() {
+    document.getElementById('rimg').click();
+};</script>
+           </div> 
+           <div class="col-sm-6"></div>
+           <div class="col-sm-6" id="preview2"><img src="images/image-upload.png" class="image-wrapper-sm" width="100%"> </div>
+         </div>
+
+         <div class="col-sm-4 col-Upload">
+           <div class="col-sm-6 bizLogoTxt" style="margin-top: 80px;"> Store Profile Picture</div>
+           <div class="col-sm-6"><button class="btn btnUpload-a" id="add-card-btn3">Upload <i class="fas fa-caret-down"></i></button>
+            <input type="file" id="pimg" name="pimg" style="visibility: hidden;">
+                                    
+                       
+                                    
+                                    
+<script>document.getElementById('add-card-btn3').onclick = function() {
+    document.getElementById('pimg').click();
+};</script>
+           </div> 
+           <div class="col-sm-6"></div>
+           <div class="col-sm-6" id="preview3"><img src="images/image-upload.png" class="image-wrapper-sm" width="100%"> </div>
+         </div>
+
+         <div class="clear"></div> 
+         <div class="padding-sn"></div>
+
+
+   </div>
+
+     <!-- END OF CONTAINER THREE-->
+
+  <div class="padding-sm"></div>
+
+  <!-- START OF CONTAINER FOUR-->
+
+
+   <div class="container" style="background-color: #e5e5e5;">
+      <div class="padding-sn"></div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+          <div class="col-sm-4"><a href="business-account-info.html"> <button onclick="location.href = 'business-account-info.html';" class="btn btnBack-e">BACK</button></a> </div> 
+          <div class="col-sm-4"><button class="btn btnSave-e" style="display: none">SAVE</button></div>
+          <div class="col-sm-4"><button class="btn btnNext-e" type="submit" id="next" name="next">NEXT</button> </div>
+          <div class="clear"></div>
+          <div class="padding-sm"></div>
+      </div>
+      <div class="col-sm-3"></div>     
+      <div class="padding-sn"></div>
+   </div>
+  <div class="padding-sn"></div>
+   </form>
+</body>
+
+<!-- Mirrored from sportsocial.webfactional.com/Dashboard/business-details-info by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Jul 2018 11:34:10 GMT -->
+</html>
+
+
+<script>
+    
+    $("#next").click(function (){
+	  $.blockUI({ css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff'},
+            message: '<h1>Please Wait...</h1><p> </p>' 
+            
+        });
+        var datapro= $('#forem').serialize();
+        
+         $.post("business-details-info94e1.html?next=1", $("#forem").serialize(), function(data) {
+        if(data == 1)
+        {
+           // $.unblockUI();
+          window.location = "new-member.html";
+        }
+        else
+        {
+           $.unblockUI();
+           $("#error").show();
+           $("#error").html(data);
+           $('#error').delay(5000).fadeOut('slow');
+        }
+    });
+    });
+  </script>
+   <script>
+      function formsubmit()
+      {
+          
+          $("#forem").submit();
+      }
+      </script>
+  
+  

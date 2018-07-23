@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from sportsocial.webfactional.com/schedule-demo by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Jul 2018 10:36:43 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Demo Of Getpoints</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script src="content/js/jquery-2.1.1.min.js"></script>
+    <script src="content/js/bootstrap.min.js"></script>
+     <script src="js/jquery.form.js"></script>
+    <script src="js/mixup.js"></script>
+    <link href="content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/main.css" rel="stylesheet" />
+    <script>var urls="thankyou.html";</script>
+    <script>
+	var t=1
+    function fillthis()
+	{
+		t++;
+		var h='<div class="row big-inputs"><div class="col-sm-2 col-sm-offset-3"><label for="locations" class="label-bold">Location '+ t +'</label></div><div class="col-sm-4"><input type="text" id="loc" name="loc[]" placeholder="Type Address Here" class="big-input" /></div></div><div class="row big-inputs"><div class="col-sm-2 col-sm-offset-3"><label for="locations" class="label-bold"></label></div><div class="col-sm-2"><input type="text" id="city" name="city[]" placeholder="Type City" class="big-input"/></div><div class="col-sm-2"><div class="styled-select"><select name="country[]"><option value="N">Select Country</option><option value="Kenya">Kenya</option><option value="South Africa">South Africa</option><option value="Uganda">Uganda</option><option value="Tanzania">Tanzania</option></select></div></div></div>';
+		
+		$("#fill").append(h);
+	}
+    </script>
+    
+    <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&amp;libraries=places&amp;key=AIzaSyAqHJKDznjae7A8QMFvJUwXzppezfe9S8g'></script>
+    <script src="locationpicker.jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+       <link rel="apple-touch-icon" sizes="57x57" href="icone/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icone/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icone/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icone/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icone/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icone/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icone/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icone/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icone/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icone/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icone/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icone/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icone/favicon-16x16.png">
+<link rel="manifest" href="icone/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icone/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    GET<strong>POINTS</strong>
+                </a>
+                
+                <button class="btn btn-default" id="login2"  data-toggle="modal" data-target="#modal41">LOG IN</button>
+                <ul class="nav navbar-right top-nav">
+                <li ><a  href="https://itunes.apple.com/us/app/getpointsapp/id1280456081?ls=1&amp;mt=8" target="_blank"><img src="appStoreIcon.png" height="40" style="margin-top:-8px;" /></a></li>
+                 <li><a href="https://play.google.com/store/apps/details?id=com.getpoints" target="_blank"><img src="available-on-android.png" height="37" style="margin-top:-8px;" /></a></li>
+                    <li>
+                        <a href="index.html">
+                                                        For Customers
+                                                    </a>
+                    </li>
+                    <li>
+                        <a href="merchant.html">
+                                                         For Merchants
+                                                    </a>
+                    </li>
+                    <li>
+                        <a href="help.html">
+                                                      Help
+                                                    </a>
+                    </li>
+                    <li>
+                        <button class="btn btn-default" id="login" data-toggle="modal" data-target="#modal41">LOG IN</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                	<!--Recently Added Code-->
+                		<li>
+                			<form class="form-horizontal">
+												<div class="form-group">
+											        <label>Select Country</label><br>
+											        <div class="flagstrap" data-input-name="country"></div>
+											    </div>
+											</form>
+                		</li>
+                		<!--//Recently Added Code-->
+                    <li><a href="index.html">For Customers</a></li>
+                    <li><a href="merchant.html">For Merchants</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li ><a  href="https://itunes.apple.com/us/app/getpointsapp/id1280456081?ls=1&amp;mt=8" target="_blank"><img src="appStoreIcon.png" height="34" style="margin-top:-8px;" /></a></li>
+                 <li><a href="https://play.google.com/store/apps/details?id=com.getpoints" target="_blank"><img src="available-on-android.png" height="32" style="margin-top:-8px;" /></a></li>
+                </ul>
+            </div>
+        </nav>        <div class="container-fluid">
+            <div class="row" id="shedule-demo">
+                <h2>SCHEDULE DEMO OF GETPOINTS</h2>
+                <p>Let one of our success managers show you how we can grow your revenue in hours</p>
+            </div>
+            <form action="http://sportsocial.webfactional.com/schedule-demo?Submit=Submit" method="post"  enctype="multipart/form-data" id="form">
+            <div id="ajax-loading" style="display:none"></div>
+             <div id="error" class="error" style="display:none"></div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="name" class="label-bold">Your Name</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" id="name" placeholder="Type Here" class="big-input" name="name" />
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="title" class="label-bold">Title</label>
+                </div>
+                <div class="col-sm-4">
+                 <div class="styled-select high">
+                    <select name="title">
+                            <option value="Select One">Select One</option>
+            <option value="CEO" >CEO</option>
+            <option value="Co-Founder" >Co-Founder</option>
+            <option value="CFO" >CFO</option>
+            <option value="COO" >COO</option>
+            <option value="General Manager" >General Manager</option>
+            <option value="Marketing Director" >Marketing Director</option>
+            
+              <option value="Marketing" >Marketing</option>
+              
+              <option value="Owner" >Owner</option>
+              
+              <option value="Partner" >Partner</option>
+              
+            
+            <option value="VP" >VP</option>
+            
+
+
+
+
+
+
+
+                        </select>
+                        </div>
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="business" class="label-bold">Business</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" id="business" placeholder="Type Here" class="big-input" name="bname"   />
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label class="label-bold">Type of Business</label>
+                </div>
+                <div class="col-sm-4">
+                    <div class="styled-select">
+                        <select name="cat">
+                        <option value="N">
+                                Type of Business
+                            </option>
+                                                    
+                            <option value="9">Auto Repair </option>
+                                                        
+                            <option value="3">Beauty & Spas</option>
+                                                        
+                            <option value="11">Clothing Store</option>
+                                                        
+                            <option value="8">Coffee Houses</option>
+                                                        
+                            <option value="4">Entertainment</option>
+                                                        
+                            <option value="7">Fitness & Instruction</option>
+                                                        
+                            <option value="1">Food</option>
+                                                        
+                            <option value="12">Jewelry Store</option>
+                                                        
+                            <option value="6">Pets</option>
+                                                        
+                            <option value="2">Restaurants</option>
+                                                        
+                            <option value="10">Seafood Store</option>
+                                                        
+                            <option value="5">Shopping</option>
+                                                       
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="web" class="label-bold">Website</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" name="website" id="web" value="http://" class="big-input" />
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="email" class="label-bold">Email</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="email" name="email" id="email" placeholder="Add Your Email Address" class="big-input" />
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="phone" class="label-bold">Business Phone</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="tel" name="phone" id="phone" maxlength="14" placeholder="305-555-1212" class="big-input" />
+                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="locations" class="label-bold">Location</label>
+                </div>
+                <div class="col-sm-4">
+                    
+    <div class="form-horizontal" style="width: 550px">
+        <div class="form-group">
+           
+
+            <div class="col-sm-10">
+                <input type="text" class="big-input form-control" id="us3-address" name="loc"    />
+            </div>
+            
+        </div>
+        
+        <div class="form-group" style="display: none">
+            <label class="col-sm-2 control-label">Radius:</label>
+
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="us3-radius"   />
+            </div>
+        </div>
+        <div id="us3" style="width: 550px; height: 400px;"></div>
+        <div class="clearfix">&nbsp;</div>
+        <div class="m-t-small">
+            
+
+            <div class="col-sm-3">
+                <input type="hidden" class="form-control" style="width: 110px" id="us3-lat" name="lat"  />
+               
+            </div>
+           
+
+            <div class="col-sm-3">
+                <input type="hidden" class="form-control" style="width: 110px" id="us3-lon" name="lng"   />
+            </div>
+        </div>
+        <div class="form-group">
+           
+
+            <div class="col-sm-10">
+                <input type="text" class="big-input form-control"  placeholder="Enter Phone Number" name="phone"    />
+            </div>
+            
+        </div>
+        <div class="clearfix"></div>
+        <script>
+            
+ var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};         
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log('Latitude : ${crd.latitude}');
+  $("#us3-lat").val(pos.coords.latitude);
+  $("#us3-lon").val(pos.coords.longitude);
+  console.log('Longitude: ${crd.longitude}');
+  console.log('More or less ${crd.accuracy} meters.');
+}
+
+function error(err) {
+  console.warn('ERROR(${err.code}): ${err.message}');
+}
+
+
+            </script>
+        <script>
+            
+        navigator.geolocation.getCurrentPosition(success, error, options);    
+          
+            $('#us3').locationpicker({
+                
+           
+
+                location: {
+                    latitude: $("#us3-lat").val(),
+                    longitude: $("#us3-lon").val()
+                },
+                radius: 300,
+                inputBinding: {
+                    latitudeInput: $('#us3-lat'),
+                    longitudeInput: $('#us3-lon'),
+                    radiusInput: $('#us3-radius'),
+                    locationNameInput: $('#us3-address')
+                },
+                enableAutocomplete: true,
+                onchanged: function (currentLocation, radius, isMarkerDropped) {
+                    // Uncomment line below to show alert on each Location Changed event
+                    //alert("Location changed. New location (" + currentLocation.latitude + ", " + currentLocation.longitude + ")");
+                }
+            });
+            
+            
+            
+            
+        </script>
+    </div>
+</body>
+
+
+<!-- Mirrored from sportsocial.webfactional.com/schedule-demo by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Jul 2018 10:36:43 GMT -->
+</html>                </div>
+            </div>
+            <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="locations" class="label-bold"></label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" id="city" name="city" placeholder="Type City" class="big-input"/>
+                   
+                </div>
+                <div class="col-sm-2">
+                   <div class="styled-select">
+                        <select name="country">
+                        <option value="N">
+                               Select Country
+                            </option>
+                                                    
+                            <option value="Kenya">Kenya</option>
+                                                        
+                            <option value="South Africa">South Africa</option>
+                                                        
+                            <option value="Uganda">Uganda</option>
+                                                        
+                            <option value="Tanzania">Tanzania</option>
+                                                       
+                        </select>
+                    </div>
+                   
+                </div>
+                 
+            </div>
+           
+           
+            
+           <div class="row big-inputs">
+                <div class="col-sm-2 col-sm-offset-3">
+                    <label for="email" class="label-bold">Sales Rep</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" name="sales" id="sales" placeholder="Type in Your Sales Reps Name" class="big-input" />
+                </div>
+            </div>
+            <div class="row circle-text">
+                <input type="submit" class="btn btn-default green-button " name="Submit" value="Shedule My Demo"><br />
+                <p>We'll reach you out in the next business day.</p>
+            </div>
+             </form>
+        </div>
+        ﻿
+        <div class="container-fluid footer">
+            <div class="row hidden-small">
+                <div class="col-sm-2 col-sm-offset-1">
+                    <h4>FOR MERCHANTS</h4>
+                    <ul>
+                        <li><a href="merchant.html">For Merchants</a></li>
+                                <li><a href="how-it-works.html">How It Works For you</a></li>
+                                <li><a href="schedule-demo.html">Schedule Demo</a></li>
+                                <li><a href="schedule-demo.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h4>FOR CONSUMERS</h4>
+                    <ul>
+                         <li><a href="index.html">For Consumers</a></li>
+                                <li><a href="how-it-works-consumers.html">How It Works For you</a></li>
+                                <li><a href="how-redeem-gifts">How Do I Redeem My Gifts</a></li>
+                                <li><a href="find-reward.html">Find A Merchant</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="about">About Us</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="press.html">Press</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="support.html">Get Support</a></li>
+                                <li><a href="support.html">Support</a></li>
+                                <li><a href="terms.html">Terms</a></li>
+                                <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h4>SOCIAL NETWORKS</h4>
+                    <ul id="social-networks">
+                        <li><a href="#"><img src="content/images/fb.png"></a></li>
+                        <li><a href="#"><img src="content/images/twt.png"></a></li>
+                        <li><a href="#"><img src="content/images/gplus.png"></a></li>
+                        <li><a href="#"><img src="content/images/pin.png"></a></li>
+                        <li><a href="#"><img src="content/images/ytube.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-group hidden-big" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <button type="button" class="btn footer-collapse" data-parent="#accordion" data-toggle="collapse" data-target="#for-merchants" aria-expanded="true" aria-controls="for-merchants">
+                        <h4>FOR MERCHANTS</h4>
+                    </button>
+                    <div id="for-merchants" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="merchant.html">For Merchants</a></li>
+                                <li><a href="how-it-works.html">How It Works For you</a></li>
+                                <li><a href="schedule-demo.html">Schedule Demo</a></li>
+                                <li><a href="schedule-demo.html">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <button type="button" class="btn footer-collapse" data-parent="#accordion" data-toggle="collapse" data-target="#for-customers" aria-expanded="true" aria-controls="for-customers">
+                        <h4>FOR CONSUMERS</h4>
+                    </button>
+                    <div id="for-customers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="index.html">For Consumers</a></li>
+                                <li><a href="how-it-works-consumers.html">How It Works For you</a></li>
+                                <li><a href="how-redeem-gifts">How Do I Redeem My Gifts</a></li>
+                                <li><a href="find-reward.html">Find A Merchant</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <button type="button" class="btn footer-collapse" data-parent="#accordion" data-toggle="collapse" data-target="#company" aria-expanded="true" aria-controls="company">
+                        <h4>COMPANY</h4>
+                    </button>
+                    <div id="company" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="about">About Us</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="press.html">Press</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="help.html">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <button type="button" class="btn footer-collapse" data-parent="#accordion" data-toggle="collapse" data-target="#help" aria-expanded="true" aria-controls="help">
+                        <h4>HELP</h4>
+                    </button>
+                    <div id="help" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="support.html">Get Support</a></li>
+                                <li><a href="support.html">Support</a></li>
+                                <li><a href="terms.html">Terms</a></li>
+                                <li><a href="privacy.html">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul id="social-networks">
+                    <li><a href="#"><img src="content/images/fb.png"></a></li>
+                    <li><a href="#"><img src="content/images/twt.png"></a></li>
+                    <li><a href="#"><img src="content/images/gplus.png"></a></li>
+                    <li><a href="#"><img src="content/images/pin.png"></a></li>
+                    <li><a href="#"><img src="content/images/ytube.png"></a></li>
+                </ul>
+            </div>
+        </div>
+ 
+  <div class="modal fade" id="modal41" tabindex="-1" role="dialog" aria-labelledby="modal4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="max-width:600px;">
+                <div class="modal-header" style="height:60px;">
+                   <b style="font-size:20px;">Login Below</b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button><br />
+                </div>
+                <div class="modal-body ">
+                    <form action="http://sportsocial.webfactional.com/loginscript" method="post" enctype="multipart/form-data" id="form">
+                    <div class="row">
+                    <div id="ajax-loading" style="display:none; width:66.5%; height:100%"></div>  
+             <div id="error" class="error" style="display:none"></div>
+                        <div class="col-sm-6 col-sm-offset-1" id="info-container" style="width:80%">
+                            
+                            <input type="text" id="email" placeholder="Enter Your Email" class="big-input" name="email" />
+                            <input type="password" id="title" placeholder="Enter Your Password" class="big-input" name="pass" />                             <a href="forgotb73c.html?t=1">Forgot Your Password ?</a> 
+                                                         <br />
+                        </div>
+                     
+                    </div>
+                    <div class="circle-text">
+                                            <input type="submit" name="Submit" class="btn btn-default bird-button" value="Login" />
+                                        </div>
+                    </form>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>  <script src="js/jquery.form.js"></script>
+    <script src="js/mixup.js"></script>
+     <script>
+	 
+	 var urls="d";
+     
+     </script>    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #fff;
+	padding:5px 2%;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.09);
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar-header {
+    float: none !important;
+}
+
+.navbar-brand {
+    float: none;
+}
+
+.btn { /* just for this demo. */
+    margin-top: 5px;
+}
+.btn-arrow-right, 
+.btn-arrow-left {
+    position: relative;
+	background-color:#ececec;
+	border-color:#777;
+}
+.btn-arrow-right {
+    padding-left: 36px;
+	padding-right: 36px;
+}
+.btn-arrow-left {
+    padding-right: 36px;
+}
+
+.active{
+	background-color:#05877A;
+}
+
+@media (max-width: 768px){
+	.btn-arrow-right {
+    	width:100%;
+    }
+}
+@media (min-width: 768px){
+    .nav>li>a {
+        display: inline;
+        padding: 1px 1px;
+    }
+}
+
+.btn-arrow-right:before,
+.btn-arrow-right:after,
+.btn-arrow-left:before,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    top: 5px; /* move it down because of rounded corners */
+    width: 22px; /* same as height */
+    height: 22px; /* button_outer_height / sqrt(2) */
+    background: inherit; /* use parent background */
+    border: inherit; /* use parent border */
+    border-left-color: transparent; /* hide left border */
+    border-bottom-color: transparent; /* hide bottom border */
+    border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+    -webkit-border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.btn-arrow-left:before,
+.btn-arrow-left:after {
+    transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+}
+.btn-arrow-right:before,
+.btn-arrow-left:before { /* align the "before" square to the left */
+    left: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+    right: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:before { /* bring arrow pointers to front */
+    z-index: 1;
+}
+.btn-arrow-right:before,
+.btn-arrow-left:after { /* hide arrow tails background */
+    background-color: white;
+}
+
+
+@media (min-width: 768px) {
+    .btn-arrow-right, .btn-arrow-left {
+    	font-size:14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .btn-arrow-right, .btn-arrow-left {
+    	font-size:16px;
+    }
+}
+
+@media (min-width: 1160px) {
+    .btn-arrow-right, .btn-arrow-left {
+    	height: 55px;
+        font-size: 16px;
+    }
+    .btn-arrow-right {
+        padding-left: 46px;
+    	padding-right: 46px;
+    }
+
+    .btn-arrow-right:before,
+    .btn-arrow-right:after,
+    .btn-arrow-left:before,
+    .btn-arrow-left:after { 
+        /*top: 10px;
+        width: 45px;
+        height: 45px;*/
+        top: 8px;
+        width: 39px;
+        height: 37px;
+        margin-left: 5px;
+    }
+    .btn-arrow-right:before,
+    .btn-arrow-left:before {
+        left: -25px;
+    }
+    .btn-arrow-right:after,
+    .btn-arrow-left:after {
+        right: -20px;
+    }
+
+}
+
+@media (min-width: 2560px) {
+      .btn-arrow-right,
+      .btn-arrow-left {
+    	font-size:42px;
+    }
+}
+
+
+
+.progress-bar{
+	background: #05877A;
+    padding: 0px;
+}
+
+.msg{
+	font-size:18px;
+	color:#aaa;
+}
+.msg2{
+	font-size:18px;
+}
+
+.btn-default.active {
+    color: #fff;
+    background-color: #05877A;
+    border-color: none;
+}
+.navbar-inverse {
+    /*background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));*/
+    background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+}
+.progress {
+    height: 20px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.progress-bar-100{
+    width: 100%;
+}
+.progress-bar-80{
+    width: 80%;
+    border-radius: 7px;
+}
+.progress-bar-60{
+    width: 60%;
+    border-radius: 7px;
+}
+.progress-bar-40{
+    width: 40%;
+    border-radius: 7px;
+}
+.progress-bar-20{
+    width: 20%;
+    border-radius: 7px;
+}
+/*edit progress bar CSS*/
+.progress-bar-33{
+    width: 33.3%;
+    border-radius: 7px;
+}
+.progress-bar-66{
+    width: 66.6%;
+    border-radius: 7px;
+}
+
